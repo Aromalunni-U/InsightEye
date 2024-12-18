@@ -1,0 +1,29 @@
+{% include "base.html" %}
+{% include "nav.html" %}
+
+{% block content %}
+
+<div class="container-fluid mt-5 d-flex justify-content-center">
+    <a href="{% url "camera" %}" class="btn btn-primary mx-3">Camera</a>
+  
+
+
+</div>
+
+<div class="container mt-3">
+    <p class="text-center">
+        <b>Click the "Camera" button to start the camera and begin tracking your eye movements. This will provide real-time feedback on your eye blink rate and gaze stability.<br> Ensure your device's camera is enabled to use this feature.</b>
+    </p>
+</div>
+
+
+ {% if text %}
+<div class="container my-5 p-5" style="background-color: white; border-radius:15px ; box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">   
+    <p>
+        {{ text|safe }}
+    </p>
+
+</div>
+{% endif %} 
+
+{% endblock content %}

@@ -1,0 +1,62 @@
+{% include "base.html" %}
+{% block content %}
+
+{% include "nav.html" %}
+
+<div class="container  mt-5 text-light p-5 shadow-lg mt-5" style=" background-color: rgba(0, 0, 0, 0.4); border-radius:10px;" data-aos="fade-up">
+    
+    <h1 data-aos="fade-up" class="fs-3" style="text-shadow:3px 3px 1px black;">Overview</h1>
+    <p data-aos="fade-left" data-aos-delay="200">
+        InsightEye is an innovative tool designed to assess mental health through real-time eye-tracking analysis, leveraging Mediapipe for facial landmark detection and Generative AI for data interpretation. This system aims to provide non-invasive, cost-effective, and quick insights into mental and neurological health by analyzing key eye movement metrics.
+    </p>
+    <h1 data-aos="fade-up" class="fs-3 mt-4" style="text-shadow:3px 3px 1px black;">Technologies Used</h1>
+
+            <ul data-aos="fade-left" data-aos-delay="200">
+                <li>Mediapipe: For pose detection and movement analysis.</li>
+                <li>Django: Backend framework for processing and data handling.</li>
+                <li>Bootstrap: Frontend framework for creating a visually appealing interface.</li>
+            </ul>
+
+    <h1 data-aos="fade-up" class="fs-3" style="text-shadow:3px 3px 1px black;">Key Features</h1>
+
+    <ul data-aos="fade-left" data-aos-delay="200">
+        <li><span class="fw-bold" >Blink Rate Monitoring:</span> Tracks and calculates the frequency of eye blinks, providing indicators of stress, fatigue, or cognitive workload.</li>
+        <li><span class="fw-bold" >Gaze Stability Analysis:</span> Measures the steadiness of the gaze, detecting possible signs of anxiety, distraction, or neurological disorders.</li>
+        <li><span class="fw-bold" >Saccadic Speed Evaluation:</span> Analyzes rapid eye movements to detect irregularities that may indicate fatigue, stress, or neurocognitive conditions.</li>
+        <li><span class="fw-bold" >Generative AI Insights:</span> Summarizes eye-tracking data into actionable mental health insights, enhancing user understanding and decision-making.</li>
+    </ul>
+
+
+</div>
+
+
+<div class="container  my-5 text-light p-5 shadow-lg" style=" background-color: rgba(0, 0, 0, 0.4); border-radius:10px;" >
+
+    <h1 data-aos="fade-up" class="fs-3 mb-2" style="text-shadow:3px 3px 1px black;">Eye Aspect Ratio (EAR)</h1>
+    <p data-aos="fade-up" class="mb-5 mt-3">
+        The Eye Aspect Ratio (EAR) is a metric used to measure eye openness. It is calculated using specific eye landmarks detected by Mediapipe. The EAR value decreases when the eyes are closed, enabling blink detection and drowsiness monitoring.
+    </p>
+
+{% load static %}
+    <div class="d-flex ">
+        
+        <div class="col-md-6">
+            <img src="{% static 'images/ear_eq.png' %}" width="600px" class="img-fluid rounded shadow-sm">
+            <p class="text-center mt-2">EAR Equation</p>
+        </div>
+        <div class="col-md-6 ms-3" >
+            <img src="{% static 'images/ear1.jpg' %}"  class="img-fluid rounded shadow-sm" style="height:130px;">
+            <p class="text-center mt-2">EAR progression from open to closed eyes.</p>
+        </div>
+    </div>
+
+    <div class="col-md-6 mt-3 ">
+        <img src="{% static 'images/EAR.png' %}" alt="EAR Example Open Eye" class="img-fluid rounded shadow-sm">
+        <p class="text-center mt-2">Open eye will have more EAR, closed eye will have less EAR.</p>
+    </div>
+
+</div> 
+
+
+
+{% endblock content %}
