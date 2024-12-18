@@ -1,4 +1,4 @@
-#InsightEye 
+# InsightEye 
 
 InsightEye
 InsightEye is a real-time eye-tracking and video analysis web application designed to provide insights into eye movements, blink rates, gaze stability, and saccadic speed. The application is built using Django for the backend, OpenCV for video processing, and MediaPipe for face and eye landmark detection.
